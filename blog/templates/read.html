@@ -1,0 +1,30 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap&subset=korean" rel="stylesheet">
+<style>
+.a {
+  width: 555px;
+  height: 555px;
+  text-align: center;
+  font-family: 'Do Hyeon', sans-serif;
+}
+</style>
+<div class="container">
+  <div class="main-container">
+    <div style="padding-top:10px; text-align:center;">
+      <h1>오늘은 {{ selected_blog.title }}(이)다!</h1>
+      <p style="padding-top:10px;">{{ selected_blog.body }}</p>
+      <img class=a style="max-width:100%;" src="{{ selected_blog.image.url }}" alt="불러올 수 없..">
+      <div class="form-group">
+        <a href="{% url 'home' %}" style="text-decoration:none;">
+          <button type="button" class="btn btn-block btn-outline-dark">다시뽑기</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
